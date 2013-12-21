@@ -1,0 +1,321 @@
+/*--- Conainer and body--- */
+	body
+	{
+		margin: 0px;
+		font-family: 'Roboto', sans-serif;
+		background-color: #EEE;
+		background-size: 100% auto;
+	}
+
+	#container
+	{
+		width:100%;
+		max-width: 900px;
+		height:100%;
+		margin: 0px auto;
+	}
+
+/*--- link styles--- */
+	a
+	{
+		color:#DC3D24;;
+		position: relative;
+		text-decoration: none;
+		transition:all .4s;
+		cursor: pointer;
+	}
+	a:after
+	{
+		position: absolute;
+		height:1px;
+		width:0%;
+		background-color: #DC3D24;;
+		bottom:0px;
+		left:0px;
+		content:'';
+		transition:all .4s;
+	}
+
+	a:hover:after
+	{
+		width:100%;
+	}
+
+/*--- the header ---*/
+	header
+	{
+		text-align: center;
+		width:100%;
+		margin-bottom: 70px;
+		color: #222;
+		
+	}
+
+	header h1
+	{
+		position: relative;
+		font-weight: 200;
+		font-size: 70px;
+		z-index:1;
+	}
+
+/*	#circle
+	{
+		position: relative;
+		width:200px;
+		height: 200px;
+		border-radius: 500px;
+		top:-50px;
+		left:-50%;
+		content: '';
+		background-color: #DC3D24;
+		z-index:-1;
+		display: inline-block;
+	}*/
+
+/*--- the icons and there container--- */
+	#icons
+	{
+		min-height: 50px;
+		text-align: center;
+	}
+
+	#icons img
+	{
+		position: relative;
+		display: inline;
+		margin-left:20px;
+		margin-right:20px;
+		width:50px;
+		height:50px;
+		cursor: pointer;
+		z-index:100;
+	}
+
+	#icons span
+	{
+		position: relative;
+	}
+
+	#icons span:hover:after
+	{
+		visibility: visible;
+		left:0%;
+		background: #DC3D24;
+		color: #fff;
+	}
+
+	#icons span:after
+	{
+		font-size: 20px;
+		font-weight: 300;
+		width:100%;
+		padding-top:10px;
+		padding-bottom:10px;
+		top:-90px;
+		background: rgba(0,0,0,0);
+		color: rgba(0,0,0,0);
+		content:attr(title);
+		position: absolute;
+		left: -10%;
+		z-index: 98;
+		visibility: hidden;
+		transition:all .3s;
+	}
+
+	#icons span:before
+	{
+		margin:0px auto;
+		position: absolute;
+		top:-44px;
+		left:10px;
+		content:"";
+		width: 0; 
+		height: 0; 
+		border-style: solid;
+		border-width: 0px 6.5px 0 6.5px;
+		border-color: rgba(0,0,0,0) transparent transparent transparent;
+		transition:all .4s;
+		z-index: 100;
+	}
+
+	#icons span:hover:before
+	{
+		left:40px;
+		border-width: 7px 6.5px 0 6.5px;
+		border-color: #DC3D24 transparent transparent transparent;
+	}
+
+/*--- the triangle and it's container ---*/
+	#triangle_slider
+	{
+		padding-top:10px; 
+		height: 23px;
+	}
+
+	#triangle
+	{
+		margin:0px auto;
+		position: relative;
+		left:-95px;
+		content:"";
+		width: 0; 
+		height: 0; 
+		border-left: 23px solid transparent;
+		border-right: 23px solid transparent;
+		border-bottom: 23px solid #FFF;
+		transition:all .4s;
+		z-index: 100;
+	}
+
+/*--- the card holder ---*/
+	#card
+	{
+		position: relative;
+		width:100%;
+		min-height:400px;
+		border-radius: 3px;
+		overflow: hidden;
+		background-color: #fff;
+		box-shadow: 0 0 50px #222;
+	}
+
+	#card img
+	{
+		float:right;
+		max-width: 50%;
+		margin-left:20px;
+		margin-bottom:20px;
+	}
+
+	#card p
+	{
+		padding:20px;
+		font-size: 20px;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
+	}
+
+	#card h2
+	{
+		color:#DC3D24;
+		padding:20px;
+		padding-bottom:0px;
+		margin-left:20px;
+		font-weight: 300;
+		font-size: 40px;
+	}
+
+	#card h3
+	{
+		padding:15px;
+		font-weight: 300;
+		font-size: 25px;
+	}
+
+	#card ul
+	{
+		
+		list-style-type: none;
+	}
+
+	#card li
+	{
+		position: relative;
+		color: teal;
+		width:100%;
+		z-index: 1;
+		color: #FFF;
+	}
+
+	#card li:before
+	{
+		width:150%;
+		height: 100%;
+		top:0px;
+		background-color: #DC3D24;
+		content:'';
+		position: absolute;
+		right: 5%;
+		z-index: -1;
+		transition:all .2s;
+		-webkit-animation:myfirst 5s;
+	}
+
+	#contact_type
+	{
+		width:50%;
+		height:100%;
+		float:left;
+	}
+
+	#contact_info
+	{	
+		height: 100%;
+		width:50%;
+		float:right;
+	}
+
+	#contact_info ul
+	{
+		list-style: none;
+	}
+
+	#contact_info li:before
+	{
+		right:0%;
+		width:105%;
+	}
+
+	#contact_info li:hover:before
+	{
+		right:0% !important;
+	}
+
+
+	#card li:hover:before
+	{
+		right:-5%;
+	}
+
+/*---Individual card styles---*/
+	.content
+	{
+		position: absolute;
+		background-color: #FFF;
+		width: 100%;
+		height:100%;
+		transition:top .5s;
+	}
+
+	#home_card
+	{
+		top:0%;
+	}
+
+
+	#map_card
+	{
+		top:100%;
+	}
+
+	#map_card iframe
+	{
+		width:100%;
+		height:100%;
+	}
+
+	#contact_card
+	{
+		top:200%;
+	}
+
+	#contact_card a
+	{
+		color:white;
+	}
+
+	#contact_card a:after
+	{
+		background-color:white;
+	}
