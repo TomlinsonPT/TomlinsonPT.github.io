@@ -226,11 +226,16 @@
 		font-size: 40px;
 	}
 
-	#card h3
+	#card h3,h4
 	{
 		padding:15px;
 		font-weight: 300;
 		font-size: 25px;
+	}
+
+	#card h4
+	{
+		font-size: 20px;
 	}
 
 	#card ul
@@ -242,7 +247,6 @@
 	#card li
 	{
 		position: relative;
-		color: teal;
 		width:100%;
 		z-index: 1;
 		color: #FFF;
